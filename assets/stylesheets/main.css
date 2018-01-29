@@ -33,12 +33,6 @@ body {
 .slider img{
   width: 100%;
 }
-
-/*
-    * {box-sizing:border-box}
-      body {
-
-        }*/
     
 .mySlides {display:none}
 
@@ -610,6 +604,10 @@ article p.article-meta {
   height: 35px;
 }
 
+li:hover{
+    cursor:pointer;
+}
+
 #search-form {
   float: right;
   margin-top: 0.5%;
@@ -700,4 +698,8 @@ textarea {
 
 #about-nav, #three-nav, #contact-nav{
   display: hidden;
+}
+
+.fade-animation{
+  opacity: 1;
 }
