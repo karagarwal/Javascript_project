@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$(" #about-nav, #three-nav, #contact-nav, .contact-img, #google").hide();
-  
+  $('#feed_data').hide();
+
   $("#navHome").click(function(){
     $(" #about-nav, #three-nav, #contact-nav, .contact-img, #google").hide();
 	  $(".slideshow-container, #slider-dots, #home-nav").show();
@@ -88,8 +89,11 @@ function check_empty()
 	else 
 	{
 		document.getElementById('form');
-		// var formData = JSON.stringify($("#form").serializeArray());
-		alert("Thank you "+ form.feed_name.value +" Feedback Submitted Successfully...");
+		var row = "Feedback Submitted. Thank you " + form.feed_name.value + " and email id as " + form.feed_email.value;
+		  $('#feed_data').show();
+		  $('#feed_data').append(row + '<br>');
+      $('#feedback').css('display', 'none');
+			alert("Feedback Submitted Successfully...");
 	}
 }
 
